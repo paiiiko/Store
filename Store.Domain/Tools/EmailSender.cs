@@ -11,14 +11,14 @@ namespace Store.Domain.Tools
         {
             MailMessage message = new MailMessage();
             message.IsBodyHtml = true;
-            message.From = new MailAddress("nikolashinpaul@yandex.ru", "PetPRO");
+            message.From = new MailAddress("paul@yandex.ru", "PetPRO");
             message.To.Add(email);
             message.Subject = "Подтверждение регистрации";
             message.Body = "Для того чтобы закончить регистрацию перейдите по ссылке " +
                            "<a href =\"" + url + "\">" + url + "</a>";
             using (SmtpClient client = new SmtpClient("smtp.yandex.ru"))
             {
-                client.Credentials = new NetworkCredential("nikolashinpaul@yandex.ru", "aeaeaafgzvwcwckz");
+                client.Credentials = new NetworkCredential("paul@yandex.ru", "kz");
                 client.EnableSsl = true;
                 client.Port = 587;
                 client.Send(message);
