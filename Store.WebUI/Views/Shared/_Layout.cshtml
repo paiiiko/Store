@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link type="Image/x-icon" href="~/images/favicon.png" rel="icon">
+        <link rel="stylesheet" href="~/css/bootstrap.css" type="text/css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/listOfProducts.css" type="text/css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/layout.css" type="text/css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/cart.css" type="text/css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/login.css" type="text/css" asp-append-version="true">
+        <link rel="stylesheet" href="~/css/registration.css" type="text/css" asp-append-version="true">
+        <script src="~/js/jQuery.js" type="text/javascript"></script>
+        <script src="~/js/jQuery-Unobtrusive.js" type="text/javascript"></script>
+        <script src="~/js/jQuery-Validation.js" type="text/javascript"></script>
+    </head>
+    <body> 
+        <header id="head-wrap">
+            <div class="head-top container-fluid">
+                <div class="container"> 
+                    <div class="row d-flex justify-content-end align-items-center">
+                        <nav class="d-flex col-3 col-md-2 col-lg-1 col-sm-3 justify-content-around align-items-center">
+                            <a href="#" class="d-flex justify-content-center align-items-center">
+                                <img src="~/images/icon-telegram.png" alt="Telegram"/>
+                            </a>
+                            <a href="#" class="d-flex justify-content-center align-items-center">
+                                <img src="~/images/icon-vk.png" alt="VK"/>
+                            </a>
+                        </nav>
+                        <a asp-action="Login" asp-controller="Auth" class="my-profile justify-content-end col-md-3 col-xl-2 col-lg-3 col-sm-4 col-7">
+                            <figure class="d-flex align-items-center">
+                                <img src="~/images/icon-profile.png" alt=""/>
+                                <figcaption>Мой профиль</figcaption>
+                            </figure>
+                        </a> 
+                    </div> 
+                </div>
+            </div>
+            <div class="header container-fluid">
+                <div class="row col-12 justify-content-around align-items-center">
+                    <a href ="#" class="logo col-4 col-sm-3 col-lg-2 justify-content-sm-center justify-content-center align-items-center">
+                        <img class="justify-content-center" src="~/images/icon-logo.png" alt="Логотип">
+                    </a>
+                    <nav class="col-12 col-sm-9 col-md-8 col-lg-4 col-xl-4 d-flex justify-content-between">
+                        <a href="#">Каталог</a>
+                        <a href="#">О нас</a>
+                        <a href="#">Оплата и доставка</a>
+                        <a href="#">Контакты</a>
+                    </nav>
+                    <form class="col-lg-3 col-md-6 col-xl-3 col-sm-7 col-6 d-flex justify-content-sm-end justify-content-start" name="search" action="#" method="GET">
+                        <div class="border d-flex align-items-center">
+                            <input type="text" name="search" placeholder="Поиск по каталогу">
+                            <button class="d-flex justify-content-center align-items-center">
+                                <img src="~/images/icon-magnifier.png" alt="Поиск"/>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="corz col-6 col-md-4 col-lg-3 col-xl-3 col-sm-5 d-flex justify-content-lg-center justify-content-md-start justify-content-sm-center justify-content-end align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg"  width="35" height="35" viewBox="0 0 24 24">
+                            <path d="M9,7 L7.5,7 C6.67157288,7 6,7.67157288 6,8.5 L6,19.5 C6,20.3284271 6.67157288,21 7.5,21 L16.5,21 C17.3284271,21 18,20.3284271 18,19.5 L18,8.5 C18,7.67157288 17.3284271,7 16.5,7 L15,7 L15,9.5 C15,9.77614237 14.7761424,10 14.5,10 C14.2238576,10 14,9.77614237 14,9.5 L14,7 L10,7 L10,9.5 C10,9.77614237 9.77614237,10 9.5,10 C9.22385763,10 9,9.77614237 9,9.5 L9,7 Z M9,6 L9,5 C9,3.34314575 10.3431458,2 12,2 C13.6568542,2 15,3.34314575 15,5 L15,6 L16.5,6 C17.8807119,6 19,7.11928813 19,8.5 L19,19.5 C19,20.8807119 17.8807119,22 16.5,22 L7.5,22 C6.11928813,22 5,20.8807119 5,19.5 L5,8.5 C5,7.11928813 6.11928813,6 7.5,6 L9,6 Z M14,6 L14,5 C14,3.8954305 13.1045695,3 12,3 C10.8954305,3 10,3.8954305 10,5 L10,6 L14,6 Z"/>
+                        </svg>
+                        <div>
+                            <label class="row">20000 руб.</label>
+                            <a asp-action="CartList" asp-controller="Cart" class="row">Оформить заказ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container-fluid">
+            <div class="container">
+                <section class="categories d-block d-lg-flex row justify-content-between">
+                        
+                        @await Component.InvokeAsync("Menu")
+                        @RenderBody() 
+
+                </section>
+            </div>
+        </main>
+        <footer class="container-fluid">
+            <div class="row justify-content-center justify-content-md-between">
+                <figure class="logo col-sm-5 col-md-3 col-lg-2">
+                    <a href="#head-wrap"> 
+                        <img src="~/images/icon-logo.png"/>
+                    </a> 
+                    <figcaption>Описание сути магазина</figcaption>
+                </figure>
+                <nav class="menu col-sm-5 col-md-3">
+                    <a href="#" class="d-block">Каталог</a>
+                    <a href="#" class=" d-block">О нас</a>
+                    <a href="#" class="d-block">Оплата и доставка</a>
+                    <a href="#" class="d-block">Политика конфиденциальности</a>
+                    <a href="#" class="d-block">Контакты</a>
+                </nav>
+                <div class="col-sm-8 col-md-5">
+                    <form name="search" action="#" method="GET">
+                        <div class="d-flex justify-content-between">
+                            <input type="text" name="search" placeholder="Поиск по каталогу"/>
+                            <button>
+                                <img src="~/images/icon-magnifier-footer.png" alt="Поиск">
+                            </button>
+                        </div>
+                    </form>
+                    <div class="soc">
+                        <p>Следи за нами в соц. сетях</p>
+                        <nav>
+                            <a href="#">
+                                <img class="tel" src="~/images/icon-telegram-footer.png">
+                            </a>
+                            <a href="#">
+                                 <img class="vk" src="~/images/icon-vk-footer.png">
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+                <p class="copyrights text-center">Все права защищены &copy; 2023</p>
+            </div>
+        </footer>
+    </body>
+</html> 

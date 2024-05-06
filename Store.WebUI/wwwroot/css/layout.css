@@ -1,0 +1,345 @@
+@import url('bootstrap.css');
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-grey-dark: #4b4b4e;
+    --color-gray-light: #f7f6f6;
+    --color-grey2: #d7d7d7;
+    --color-grey4: #bdbdbd;
+    --color-yellow: #f0a410;
+    font-size: 16px !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul, p, h1, h2, h3, figure, figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+/* fonts */
+
+@font-face {
+    font-family: "opensans";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+    font-family: "opensans";
+    font-weight: bold;
+    src: url("../fonts/OpenSans-Bold.ttf");
+}
+@font-face {
+    font-family: "opensans";
+    font-weight: 300;
+    src: url("../fonts/OpenSans-Light.ttf");
+}
+@font-face {
+    font-family: "opensans";
+    font-weight: 600;
+    src: url("../fonts/OpenSans-SemiBold.ttf");
+}
+@font-face {
+    font-family: "opensans";
+    font-weight: 800;
+    src: url("../fonts/OpenSans-ExtraBold.ttf");
+}
+
+/* global */
+
+body {
+    font-family: "opensans", sans-serif, Arial;
+    margin: 0;
+    width: 100%
+}
+
+/* header-top */
+
+header .head-top {
+    background-color: var(--color-gray-light);
+    padding: 5px 0;
+}
+header .head-top nav a img {
+    width: 20px;
+    height: 20px;
+}
+header .head-top nav a:hover {
+    background-color: var(--color-yellow);
+    transition: 0.5s all ease;
+}
+header .head-top .my-profile figure figcaption{
+    font-size: 0.8125rem;
+}
+header .head-top .my-profile:hover figure img{
+    background-color: var(--color-yellow);
+    transition: 0.5s all ease;
+}
+header .head-top .my-profile:hover figure figcaption{
+    color: var(--color-yellow);
+    transition: 0.5s all ease;
+}
+header .head-top a figure img {
+    width: 20px;
+    height: 20px;
+}
+header .head-top .my-profile{
+    border-left: 1px solid var(--color-grey4);
+    padding-left: 22px;
+}
+header .head-top .my-profile figure{
+    gap: 19px;
+}
+header .head-top .my-profile figure figcaption{
+    color: var(--color-grey-dark);
+}
+
+/* header-bottom */
+
+header .header{
+    border-bottom:  1px solid var(--color-grey2);
+    padding: 10px 0px;
+}
+header .header a{
+    text-align: center;
+}
+header .header a img{
+    height: 100px;
+}
+header .header nav{
+    text-align: justify;
+}
+header .header nav a{
+    line-height: 19px;
+    font-size: 0.875rem;
+    color:var(--color-grey-dark );
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+header .header nav a:hover{
+    color: var(--color-yellow);
+    transition: 0.2s all ease;
+    border-bottom-color: var(--color-yellow);
+}
+header .header .row form img{
+    width: 20px;
+    height: 20px;
+}
+header .header form > div input{
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.875rem;
+}
+header .header form > div input::placeholder{
+    font-size: 0.875rem;
+    line-height: 14px;
+    color: var(--color-grey2);
+}
+header .header form > div button{
+    background: none;
+    border: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    margin-left: 8px;
+}
+header .header .corz svg path{
+    fill: var(--color-grey-dark);
+}
+header .header .corz{
+    gap: 20px;
+    padding-right: 10px;
+}
+header .header .corz label{
+    color:var(--color-grey-dark);
+}
+header .header .corz a{
+    color: var(--color-yellow);
+    border-bottom: 1px solid transparent;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+header .header .corz a:hover{
+    color: var(--color-yellow);
+    transition: 0.3s all ease;
+    border-bottom-color: var(--color-yellow);
+}
+
+/* categories-menu */
+
+.categories{
+    margin-top: 21px;
+}
+.categories .categories-menu h3{
+    height: 50px;
+    background-color: var(--color-yellow);
+    border-radius: 5px 5px 0px 0px;
+    font-size: 1.125rem;
+    line-height: 25px;
+    color: var(--color-white);
+    padding-left: 28px;
+    padding-right: 18px;
+}
+.categories .categories-menu h3 button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 26px;
+    height: 26px;
+    display:flex;
+    padding:0;
+    margin:0;
+}
+.categories .categories-menu h3 button svg{
+    fill: var(--color-white)
+}
+.categories .categories-menu .menu{
+    border-left: 1px solid var(--color-grey2);
+    border-right: 1px solid var(--color-grey2);
+    border-bottom: 1px solid var(--color-grey2);
+    border-radius: 0px 0px 5px 5px;
+    padding-bottom: 10px;
+    padding-top: 12px;
+    margin-bottom: 20px;
+}
+.categories .categories-menu .menu ul li{
+    padding-left: 28px;
+    padding-right: 18px;
+    padding-bottom: 7px;
+}
+.categories .categories-menu .menu ul li:hover{
+    font-weight: 600;
+}
+.categories .categories-menu .menu ul li a{
+    font-size: 0.875rem;
+    line-height: 19px;
+    color: var(--color-grey-dark);
+}
+.categories .categories-menu .menu ul li a.active {
+    color: var(--color-yellow);
+}
+
+ /* footer */
+
+footer {
+    background-color: var(--color-grey-dark);
+    padding: 30px 0 20px;
+}
+footer .row{
+    gap: 8px;
+}
+footer .logo a > img{
+    height: 100px;
+    width: 100px;
+}
+footer div .logo{
+    width: 200px;
+    text-align: center;
+}
+footer .logo a{
+    scroll-behavior: smooth;
+}
+footer .logo figcaption{
+    margin-top: 15px;
+    font-size: 1.0625rem;
+    line-height: 25px;
+    color: var(--color-white);
+}
+footer .menu{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 260px;
+}
+footer .menu a{
+    font-size: 0.875rem;
+    line-height: 19px;
+    color: var(--color-white);
+    margin-bottom: 18px;
+    transition: 0.5s all ease;
+}
+footer .menu a:hover{
+    color: var(--color-yellow);
+}
+footer form button > img{
+    height: 20px;
+    width: 20px;
+}
+footer form input,
+footer form button{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+footer form input,
+footer form input::placeholder{
+    font-size: 0.875rem;
+    line-height: 19px;
+    color: var(--color-white);
+    width: 100%;
+}
+footer form{
+    max-width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer form > div{
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-white);
+}
+footer .soc{
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}
+footer .soc p{
+    font-size: 0.875rem;
+    line-height: 19px;
+    color: var(--color-white);
+    margin-top: 46px;
+}
+footer .soc nav{
+    margin-top: 20px;
+}
+footer .soc nav a .tel{
+    background-color: var(--color-white);
+    height: 45px;
+    width: 45px;
+}
+footer .soc nav a .vk{
+    background-color: var(--color-white);
+    height: 60px;
+    width: 60px;
+}
+footer .soc nav a:hover .tel{
+    background-color: var(--color-yellow);
+    transition: 0.5s all ease
+}
+footer .soc nav a:hover .vk{
+    background-color: var(--color-yellow);
+    transition: 0.5s all ease
+}
+footer .copyrights{
+    font-size: 0.75rem;
+    line-height: 16px;
+    color: var(--color-white);
+    margin-top: 30px;
+}

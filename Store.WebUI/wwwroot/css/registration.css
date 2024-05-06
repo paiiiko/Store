@@ -1,0 +1,80 @@
+.registration{
+    margin-left: auto;
+    margin-right: auto;
+}
+.registration h5{
+    font-size: 1.125rem;
+    line-height: 25px;
+    color: var(--color-white);
+    height: 50px;
+    background-color: var(--color-yellow);
+    margin-bottom: 0;
+    border-radius: 5px 5px 0 0;
+}
+.registration .form{
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--color-gray-light);
+    outline: none;
+    width: 100%;
+    padding: 0 25px;
+}
+.registration .btn{
+    border-radius: 25px;
+    height: 50px;
+    border: none;
+    background-color: var(--color-yellow);
+    outline: none;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0 25px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-yellow);
+    color: var(--color-yellow);
+    transition: 0.3s all ease;
+    margin-top: 30px;
+}
+.registration .btn:hover{
+    background-color: var(--color-yellow);
+    color: var(--color-white);
+}
+.registration-form{
+    border-left: 1px solid var(--color-grey2);
+    border-right: 1px solid var(--color-grey2);
+    border-bottom: 1px solid var(--color-grey2);
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 35px;
+    margin-bottom: 20px;
+    border-radius: 0 0 5px 5px;
+}
+.registration-form .forgot{
+    display: flex;
+    justify-content: end;
+    font-size: 0.8125rem;
+    margin-bottom: 30px;
+    color: var(--color-grey-dark);
+}
+.registration-form a{
+    color: var(--color-yellow);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid transparent;
+}
+.registration-form a:hover{
+    color: var(--color-yellow);
+    transition: 0.3s all ease;
+    border-bottom-color: var(--color-yellow);
+}
+.field-validation-error {
+    color: var(--color-yellow);
+    margin-left: 26px;
+    font-size: 0.8rem;
+    height:18px;
+    display:flex;
+}
+.field-validation-valid {
+    height: 18px;
+    display:flex;
+}

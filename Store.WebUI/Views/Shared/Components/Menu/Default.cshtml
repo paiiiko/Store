@@ -1,0 +1,52 @@
+﻿@model IEnumerable<string>
+
+<div class="categories-menu col-11 col-md-8 mx-auto mb-4 mb-lg-0 mx-lg-0 col-lg-3">
+    <h3 class="d-flex justify-content-between align-items-center">
+        КАТЕГОРИИ
+        <button class="d-lg-none">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                 width="25" 
+                 height="25" 
+                 fill="currentColor" 
+                 class="bi bi-list" 
+                 viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+    </h3>
+    <nav class="menu">
+        <ul>
+            <li>
+    
+                @if(ViewBag.Category == null && ViewContext.RouteData.Values["controller"] == "Home")
+                {
+                    @Html.ActionLink("Все товары", "ListOfProducts", "Home", null, new { @class = "active" })
+                }
+                else
+                {
+                    @Html.ActionLink("Все товары", "ListOfProducts", "Home")
+                }
+    
+            </li>
+    
+            @foreach(string _category in Model)
+            {
+    
+                <li>
+    
+                    @if(ViewBag.Category == _category)
+                    {
+                        @Html.ActionLink(_category, "ListOfProducts", "Home", new { category=_category }, new { @class = "active" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink(_category, "ListOfProducts", "Home", new { category=_category }, null)
+                    }
+    
+                </li>
+    
+            }
+    
+        </ul>
+    </nav>
+</div>

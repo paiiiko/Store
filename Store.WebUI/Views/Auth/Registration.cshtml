@@ -1,0 +1,29 @@
+﻿@using Store.WebUI.ViewModels
+@model RegistrationViewModel
+
+<div class="registration justify-content-center col-lg-5 col-mb-5 col-11">
+    <h5 class="d-flex justify-content-center align-items-center">
+        СОЗДАНИЕ ПРОФИЛЯ
+    </h5>
+    <form class="registration-form" asp-action="Registration" asp-controller="Auth" method="post">
+        <div>
+            <input class="form" asp-for="Email" placeholder="Введите электронную почту">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <input class="form" asp-for="Password" placeholder="Введите пароль">
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div>
+            <input class="form" asp-for="ConfirmPassword" placeholder="Повторите пароль">
+            <span asp-validation-for="ConfirmPassword"></span>
+        </div>
+        <div>
+            <input class="form" asp-for="Name" placeholder="Введите ваше имя">
+            <span asp-validation-for="Name"></span>
+        </div>
+        <div>
+            <input class="btn" type="submit" value="Зарегистрироваться">
+        </div>
+    </form>
+</div>

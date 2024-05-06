@@ -1,0 +1,157 @@
+
+/* items main-screen */
+
+.categories .items .sort a svg{
+    width: 20px;
+    height: 12px;
+}
+.categories .items .sort a svg.active{
+    transform: rotate(0.5turn)
+}
+.categories .items .sort a.active svg path{
+    fill: var(--color-yellow);
+    transition: 0s
+}
+.items .nav{
+    padding: 18px 5px;
+}
+.items .nav .sort{
+    gap: 10px;
+}
+.items .nav .sort{
+    flex-wrap: wrap;
+}
+.items .nav .sort p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.items .nav a,
+.items .nav p{
+    font-size: 0.875rem;
+    line-height: 14px;
+    color: var(--color-grey-dark);
+}
+.items .nav a:hover{
+    color: var(--color-yellow);
+}
+.items .nav a:hover svg path{
+    fill: var(--color-yellow);
+}
+.items .nav a,
+.items .nav a svg path{
+    transition: 0.3s all ease;
+}
+.items .boxes .box{
+    width: 229px;
+}
+.box .figure img{
+    max-width: 229px;
+    max-height: 269px;
+}
+.items .boxes .box .figure {
+    height: 269px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.items .boxes .box figure figcaption{
+    padding: 14px 0 12px 11px;
+}
+.items .boxes .box figcaption p{
+    font-size: 0.875rem;
+    line-height: 19px;
+    color: var(--color-grey-dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.items .boxes .box figcaption p span{
+    font-weight: 600;
+    font-size: 1.250rem;
+    line-height: 27px;
+}
+.items .boxes .box a,
+.items .boxes .box button{
+    height: 40px;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 19px;
+    transition: 0.3s all ease;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+.items .boxes .box .a-product:hover{
+    background-color: var(--color-yellow);
+    color: var(--color-white);
+}
+.items .boxes .box .a-cart:hover {
+    background-color: var(--color-yellow);
+    color: var(--color-white);
+}
+.box figure .container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.a-product {
+    border-radius: 5px 0 0 5px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-yellow);
+    color: var(--color-yellow);
+}
+.a-cart {
+    border-radius: 0 5px 5px 0;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-yellow);
+    color: var(--color-yellow);
+    border-left:none;
+}
+.a-cart svg path {
+    fill: var(--color-yellow);
+}
+.a-cart:hover svg path{
+    fill: var(--color-white);
+}
+
+/* pagination */
+
+.pagination{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.pagination nav{
+    gap:16px;
+}
+.pagination nav a{
+    font-size: 1rem;
+    line-height: 14px;
+    color: var(--color-grey-dark);
+    transition: 0.3s all ease;
+}
+.pagination nav a:hover,
+.pagination nav a.active{
+color: var(--color-yellow);
+}
+.pagination nav a svg{
+    width: 16px;
+    height: 16px;
+}
+.pagination nav a:first-of-type{
+    transform: rotate(0.25turn);
+}
+.pagination nav a:last-of-type{
+    transform: rotate(-90deg);
+}
+.pagination nav a.disabled svg path{
+    fill: var(--color-grey2);
+}
+.pagination nav a.disabled{
+    cursor: default;
+    pointer-events: none;
+}
+.pagination nav a:hover:not(.disabled) svg path{
+    fill: var(--color-yellow);
+}
+.pagination nav a svg path{
+    transition: 0.3s all ease;
+}
